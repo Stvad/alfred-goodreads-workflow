@@ -3,11 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.wesbaker.alfred.goodreads</string>
+	<string>com.stvad.alfred.goodreads</string>
 	<key>category</key>
 	<string>Internet</string>
 	<key>connections</key>
 	<dict>
+		<key>805212F4-78D0-4916-930C-8EB421B44CDE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4BC607F5-9619-4536-B60F-D7DB363EFC5A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D125475B-CA9E-4E58-922F-007061A0CB50</key>
 		<array>
 			<dict>
@@ -23,13 +36,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Wes Baker</string>
+	<string>Wes Baker, Vladyslav Sitalo</string>
 	<key>description</key>
 	<string>Search Goodreads for Books!</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Goodreads</string>
+	<string>Goodreads (R)</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -39,6 +52,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -58,7 +73,7 @@
 				<key>runningsubtext</key>
 				<string>Searching GoodReads for '{query}'</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<string>./node_modules/.bin/run-node index.js "navigate $1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -77,7 +92,7 @@
 			<key>uid</key>
 			<string>D125475B-CA9E-4E58-922F-007061A0CB50</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -98,11 +113,91 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>grc</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching GoodReads for '{query}'</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "copy $1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Goodreads</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>805212F4-78D0-4916-930C-8EB421B44CDE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>4BC607F5-9619-4536-B60F-D7DB363EFC5A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>4BC607F5-9619-4536-B60F-D7DB363EFC5A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>405</integer>
+			<key>ypos</key>
+			<integer>205</integer>
+		</dict>
+		<key>805212F4-78D0-4916-930C-8EB421B44CDE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>255</integer>
+			<key>ypos</key>
+			<integer>205</integer>
+		</dict>
 		<key>CF622333-DC56-4C40-B7F6-3EC187098513</key>
 		<dict>
 			<key>xpos</key>
