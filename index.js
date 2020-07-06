@@ -56,6 +56,7 @@ const bookToMarkdown = (book) =>
   - metadata::
     - page_type::[[book]]
     - author::${book.authors.map(it => `[[${it}]]`).join(" ")}     
+      - page_type::[[person]] [[author]]
     - link::${book.link}
     - recommendation::
     `
